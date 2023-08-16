@@ -1,0 +1,14 @@
+create docker
+
+docker run --name some-postgres -e POSTGRES_USER=usuario -e POSTGRES_PASSWORD=secretpassword -p 5432:5432 -d postgres
+
+connection
+
+docker exec -it some-postgres bash
+psql -U usuario --password
+
+create database
+CREATE DATABASE mydb;
+
+select database
+\c mydb
